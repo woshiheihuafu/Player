@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlayerClass</class>
+ <widget class="QWidget" name="PlayerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1391</width>
+    <height>932</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Player</string>
+  </property>
+  <widget class="QPushButton" name="pb_begin">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>870</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>开始</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_video">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>1261</width>
+     <height>781</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Player.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pb_begin</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayerClass</receiver>
+   <slot>pb_begin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>614</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>191</x>
+     <y>612</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>pb_begin()</slot>
+ </slots>
+</ui>
