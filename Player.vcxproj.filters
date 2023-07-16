@@ -21,6 +21,9 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="资源">
+      <UniqueIdentifier>{cf6741b2-9726-4f31-b9ec-788b0db8b70b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Player.qrc">
@@ -46,6 +49,12 @@
     <ClCompile Include="mian1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="videoSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="online_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="packetqueue.h">
@@ -59,5 +68,21 @@
     <QtMoc Include="videoplayer.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="videoSlider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="online_dialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="sourceFile\pause.png">
+      <Filter>资源</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="online_dialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>

@@ -1,4 +1,10 @@
 <RCC>
-    <qresource prefix="Player">
-    </qresource>
+  <qresource prefix="Player"/>
+  <qresource prefix="sourceFile">
+    <file>sourceFile/voice.png</file>
+    <file>sourceFile/voice_zero.png</file>
+    <file>sourceFile/stop.png</file>
+    <file>sourceFile/begin.png</file>
+    <file>sourceFile/pause.png</file>
+  </qresource>
 </RCC>

@@ -16,23 +16,33 @@
   <widget class="QPushButton" name="pb_begin">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>870</y>
-     <width>93</width>
-     <height>28</height>
+     <x>120</x>
+     <y>830</y>
+     <width>81</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
-    <string>开始</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="Player.qrc">
+     <normaloff>:/sourceFile/sourceFile/begin.png</normaloff>:/sourceFile/sourceFile/begin.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>100</width>
+     <height>80</height>
+    </size>
    </property>
   </widget>
   <widget class="QLabel" name="lb_video">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>40</x>
      <y>50</y>
-     <width>1261</width>
-     <height>781</height>
+     <width>1041</width>
+     <height>711</height>
     </rect>
    </property>
    <property name="text">
@@ -42,8 +52,139 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="pb_stop">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>830</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="Player.qrc">
+     <normaloff>:/sourceFile/sourceFile/stop.png</normaloff>:/sourceFile/sourceFile/stop.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>100</width>
+     <height>70</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>850</y>
+     <width>160</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_time">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>780</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00:00:00</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_endtime">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>780</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00:00:00</string>
+   </property>
+  </widget>
+  <widget class="videoSlider" name="hs_progress">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>780</y>
+     <width>821</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_voice">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>830</y>
+     <width>81</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="Player.qrc">
+     <normaloff>:/sourceFile/sourceFile/voice.png</normaloff>:/sourceFile/sourceFile/voice.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>100</width>
+     <height>70</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_file">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>850</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>文件</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_online">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>850</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>网络播放</string>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>videoSlider</class>
+   <extends>QSlider</extends>
+   <header>videoSlider.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="Player.qrc"/>
  </resources>
@@ -64,8 +205,60 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pb_stop</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayerClass</receiver>
+   <slot>pb_stop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>861</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>863</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_file</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayerClass</receiver>
+   <slot>pb_file_select()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>860</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>825</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_online</sender>
+   <signal>clicked()</signal>
+   <receiver>PlayerClass</receiver>
+   <slot>pb_online()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>831</x>
+     <y>869</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>918</x>
+     <y>863</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>pb_begin()</slot>
+  <slot>pb_stop()</slot>
+  <slot>pb_file_select()</slot>
+  <slot>slot_slider_valueChange(int)</slot>
+  <slot>pb_online()</slot>
  </slots>
 </ui>

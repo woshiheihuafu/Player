@@ -95,9 +95,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mian1.cpp" />
+    <ClCompile Include="online_dialog.cpp" />
     <ClCompile Include="packetqueue.cpp" />
     <ClCompile Include="videoplayer.cpp" />
+    <ClCompile Include="videoSlider.cpp" />
     <QtRcc Include="Player.qrc" />
+    <QtUic Include="online_dialog.ui" />
     <QtUic Include="Player.ui" />
     <QtMoc Include="Player.h" />
     <ClCompile Include="Player.cpp" />
@@ -106,7 +109,12 @@
     <QtMoc Include="videoplayer.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="online_dialog.h" />
     <ClInclude Include="packetqueue.h" />
+    <QtMoc Include="videoSlider.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="sourceFile\pause.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
